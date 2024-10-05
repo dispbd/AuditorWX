@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "VP.Auditor for Winamax",
+	"description": "VPluse Auditor for site Winamax.fr",
+	"version": "1.0.0",
+	"icons": {
+		"32": "icon.png",
+		"64": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": ["activeTab"],
+	"background": {
+      "scripts": ["background.js"]
+    },
+	
+	"content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+	  "js": ["dist/jquery.min.js", "popup.js"]
+    }
+  ]
+}

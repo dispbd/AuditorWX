@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <script src="/dist/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.3/semantic.min.css" />
+  <script src="/dist/semantic.min.js"></script>
+
+  <style>
+    html,
+    body {
+	  height: 550px;
+      max-height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .ui.segment {
+      margin: 0px;
+      padding-top: 0px;
+    }
+  </style>
+</head>
+
+<body>
+        <div class="ui segment">
+          <div class="ui form">
+
+		  
+            <div class="three fields">
+
+              <div class="field">
+<h4 class="ui horizontal divider">
+  Select month
+</h4>
+					  <div class="ui calendar" id="month_year_calendar">
+  <div class="ui input left icon">
+    <i class="calendar icon"></i>
+    <input type="text" placeholder="Date">
+  </div>
+</div>
+              </div>
+              <div class="field">
+<h4 class="ui horizontal divider">
+  Or select any period
+</h4>
+                <label>Start date</label>
+                <div class="ui calendar" id="rangestart">
+                  <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="Start">
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>End date</label>
+                <div class="ui calendar" id="rangeend">
+                  <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input type="text" placeholder="End">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="fluid ui button" id="parse">Обработать</button>
+        </div>
+		
+		<div class="ui icon message">
+  <i class="notched circle loading icon"></i>
+  <div class="content">
+    <div class="header">
+      Обработка. Всего несколько минут.
+    </div>
+    <p>Пожалуйста, не закрывайте вкладку сайта, пока не обработка аудита не завершится!</p>
+  </div>
+</div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
